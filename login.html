@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Lamp | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="page-container">
+
+        <!-- TOP HEADER 
+        <header class="top-header">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-lamp"></i>
+            </div>
+
+            <div class="brand-divider"></div>
+
+            <div class="brand-title">
+                <h1>Interactive Lamp</h1>
+                <h2>Login & Signup</h2>
+            </div>
+
+        </header> -->
+
+
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+
+            <!-- LEFT SIDE: LAMP -->
+            <div class="lamp-section">
+
+                
+<div class="lamp-scene" id="lampScene">
+
+    <!-- Lamp glow -->
+    <div class="lamp-glow"></div>
+
+    <!-- Light beam -->
+    <div class="light-beam"></div>
+
+    <!-- Hanging bulb -->
+    <div class="hanging-light"></div>
+
+    <!-- Lamp -->
+    <div class="lamp">
+
+        <!-- Interactive Lamp Shade -->
+        <div
+            class="lamp-shade"
+            id="lampSwitch"
+            role="button"
+            tabindex="0"
+            aria-label="Switch lamp on"
+            aria-pressed="false"
+            title="Click to switch lamp on or off"
+        >
+            <div class="shade-highlight"></div>
+        </div>
+
+        <!-- Bulb -->
+        <div class="lamp-bulb"></div>
+
+        <!-- Lamp neck -->
+        <div class="lamp-neck">
+            <div class="lamp-joint"></div>
+        </div>
+
+        <!-- Base connector -->
+        <div class="base-joint"></div>
+
+        <!-- Lamp base -->
+        <div class="lamp-base"></div>
+
+    </div>
+
+    <!-- Floor glow -->
+    <div class="floor-glow"></div>
+
+    <!-- Lamp instruction -->
+    <div class="lamp-instruction" id="lampInstruction">
+        <i class="fa-solid fa-hand-pointer"></i>
+        Click the lamp to switch it on
+    </div>
+
+</div>
+
+     
+<!-- LAMP CONTROL PANEL -->
+<div class="lamp-controls">
+
+    <div class="lamp-control-header">
+        <span><i class="fa-solid fa-sliders"></i> LAMP CONTROLS</span>
+
+        <span id="lampStatus" class="lamp-status">
+            <span class="status-dot"></span>
+            OFF
+        </span>
+    </div>
+
+    <!-- POWER BUTTON -->
+    <div class="power-control">
+
+        <button
+            type="button"
+            id="lampPower"
+            class="power-button"
+            aria-label="Switch lamp on or off"
+            aria-pressed="false"
+        >
+            <i class="fa-solid fa-power-off"></i>
+        </button>
+
+        <div>
+            <h4>Power</h4>
+            <p>Turn your lamp on or off</p>
+        </div>
+
+    </div>
+
+    <!-- BRIGHTNESS -->
+    <div class="brightness-control">
+
+        <div class="brightness-heading">
+            <label for="brightnessSlider">
+                <i class="fa-solid fa-sun"></i> Brightness
+            </label>
+
+            <span id="brightnessValue">70%</span>
+        </div>
+
+        <input
+            type="range"
+            id="brightnessSlider"
+            min="0"
+            max="100"
+            value="70"
+            step="1"
+        >
+
+        <div class="brightness-labels">
+            <span>Dim</span>
+            <span>Bright</span>
+        </div>
+
+    </div>
+
+    <p class="lamp-tip">
+        <i class="fa-solid fa-mouse-pointer"></i>
+        Move your mouse over the lamp to control its direction.
+    </p>
+
+</div>
+
+
+                <p class="lamp-caption">
+                    LIGHT UP YOUR DIGITAL EXPERIENCE
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE: LOGIN CARD -->
+            <div class="login-section">
+
+                <div class="login-card">
+
+                    <div class="welcome-heading">
+                        <h2>Welcome</h2>
+                        <p>Sign in to continue to your account</p>
+                    </div>
+
+
+                    <!-- LOGIN / SIGNUP TABS -->
+                    <div class="auth-tabs">
+
+                        <button class="auth-tab active" type="button">
+                            Sign In
+                        </button>
+
+                        <button
+                            class="auth-tab"
+                            type="button"
+                            onclick="window.location.href='signup.html'"
+                        >
+                            Sign Up
+                        </button>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+                    <form id="loginForm">
+
+                        <!-- Email -->
+                        <div class="form-field">
+
+                            <label for="email">Username or Email</label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-regular fa-user field-icon"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="form-field">
+
+                            <div class="password-label">
+
+                                <label for="password">Password</label>
+
+                                <a href="#" id="forgotPassword">Forgot?</a>
+
+                            </div>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-lock field-icon"></i>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="togglePassword"
+                                    aria-label="Show password"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Remember Me -->
+                        <div class="remember-row">
+
+                            <label class="remember-label">
+
+                                <input type="checkbox" id="rememberMe">
+
+                                <span class="checkmark"></span>
+
+                                Remember me
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Sign In -->
+                        <button type="submit" class="login-button" id="loginButton">
+
+                            <span>Sign In</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- Feedback -->
+                        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+
+
+                        <!-- Divider -->
+                        <div class="social-divider">
+
+                            <span></span>
+
+                            <p>OR CONTINUE WITH</p>
+
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- Social Login -->
+                        <div class="social-buttons">
+
+                            <button type="button" class="social-btn" data-provider="Google" aria-label="Continue with Google">
+                                <i class="fa-brands fa-google google-icon"></i>
+                            </button>
+
+                            <button type="button" class="social-btn" data-provider="GitHub" aria-label="Continue with GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </button>
+
+                            <button type="button" class="social-btn" data-provider="Apple" aria-label="Continue with Apple">
+                                <i class="fa-brands fa-apple"></i>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER 
+        <footer class="page-footer">
+
+            <span></span>
+
+            <p>CodeBy<span>Gaurav</span></p>
+
+            <span></span>
+
+        </footer> -->
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+</html>

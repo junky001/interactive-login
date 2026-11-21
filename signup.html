@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | LAMP</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Existing lamp styles -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Signup styles -->
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- LEFT SIDE: INTERACTIVE LAMP -->
+        <section class="signup-visual">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <span>LAMP<span class="brand-dot">.</span></span>
+            </div>
+
+            <div class="visual-heading">
+                <span class="eyebrow">WELCOME TO LAMP</span>
+                <h1>Bright ideas<br>start here.</h1>
+                <p>Create your account and experience a smarter way to connect.</p>
+            </div>
+
+            <!-- LAMP SCENE -->
+            <div class="lamp-scene" id="lampScene">
+
+                <div class="lamp-glow"></div>
+                <div class="light-beam"></div>
+                <div class="hanging-light"></div>
+
+                <div class="lamp">
+
+                    <div
+                        class="lamp-shade"
+                        id="lampSwitch"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Switch lamp on"
+                        aria-pressed="false">
+                        <div class="shade-highlight"></div>
+                    </div>
+
+                    <div class="lamp-bulb"></div>
+                    <div class="lamp-neck">
+                        <div class="lamp-joint"></div>
+                    </div>
+
+                    <div class="base-joint"></div>
+                    <div class="lamp-base"></div>
+
+                </div>
+
+                <div class="floor-glow"></div>
+
+                <div class="lamp-instruction" id="lampInstruction">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    Click the lamp to switch it on
+                </div>
+
+            </div>
+
+            <!-- LAMP CONTROLS -->
+            <div class="lamp-controls">
+
+                <div class="lamp-control-header">
+                    <span><i class="fa-solid fa-sliders"></i> LAMP CONTROLS</span>
+
+                    <span id="lampStatus" class="lamp-status">
+                        <span class="status-dot"></span>
+                        OFF
+                    </span>
+                </div>
+
+                <div class="power-control">
+                    <button type="button" id="lampPower"
+                        class="power-button"
+                        aria-label="Switch lamp on or off"
+                        aria-pressed="false">
+                        <i class="fa-solid fa-power-off"></i>
+                    </button>
+
+                    <div>
+                        <h4>Power</h4>
+                        <p>Turn your lamp on or off</p>
+                    </div>
+                </div>
+
+                <div class="brightness-control">
+                    <div class="brightness-heading">
+                        <label for="brightnessSlider">
+                            <i class="fa-solid fa-sun"></i> Brightness
+                        </label>
+
+                        <span id="brightnessValue">70%</span>
+                    </div>
+
+                    <input type="range"
+                        id="brightnessSlider"
+                        min="0" max="100" value="70">
+
+                    <div class="brightness-labels">
+                        <span>Dim</span>
+                        <span>Bright</span>
+                    </div>
+                </div>
+
+             <!-- TEMPERATURE CONTROLS -->
+<div class="temperature-controls">
+
+    <button
+        type="button"
+        class="temperature-btn temperature-cool"
+        data-temperature="cool">
+
+        <i class="fas fa-snowflake"></i>
+        Cool
+    </button>
+
+    <button
+        type="button"
+        class="temperature-btn temperature-warm active"
+        data-temperature="warm">
+
+        <i class="fas fa-sun"></i>
+        Warm
+    </button>
+
+</div>
+
+<!-- LIGHTING MODES -->
+<div class="preset-control">
+
+    <div class="control-title">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        Lighting Modes
+    </div>
+
+    <div class="preset-controls">
+
+        <button
+            type="button"
+            class="preset-btn active"
+            data-preset="reading">
+
+            <i class="fas fa-book-open"></i>
+            Reading
+        </button>
+
+        <button
+            type="button"
+            class="preset-btn"
+            data-preset="focus">
+
+            <i class="fas fa-crosshairs"></i>
+            Focus
+        </button>
+
+        <button
+            type="button"
+            class="preset-btn"
+            data-preset="relax">
+
+            <i class="fas fa-moon"></i>
+            Relax
+        </button>
+
+    </div>
+
+</div>
+
+<!-- LAMP TIP -->
+<p class="lamp-tip">
+    <i class="fa-solid fa-mouse-pointer"></i>
+    Move your mouse over the lamp to control its direction.
+</p>
+
+</div>
+            <div class="visual-footer">
+                © 2026 LAMP. All rights reserved.
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE: SIGNUP FORM -->
+        <section class="signup-content">
+
+            <div class="signup-card">
+
+                <div class="mobile-brand">
+                    <i class="fa-solid fa-lightbulb"></i> LAMP.
+                </div>
+
+                <!-- Navigation -->
+                <div class="auth-navigation">
+                    <a href="login.html">Sign In</a>
+                    <a href="signup.html" class="active">Sign Up</a>
+                </div>
+
+                <div class="signup-heading">
+                    <span class="eyebrow">GET STARTED</span>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Join LAMP today. It only takes a few minutes.
+                    </p>
+                </div>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm">
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <!-- USERNAME -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-at"></i>
+
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="Choose a username"
+                                autocomplete="username"
+                                minlength="3"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required>
+
+                            <button type="button"
+                                class="password-toggle"
+                                id="toggleSignupPassword"
+                                aria-label="Show password">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <!-- PASSWORD STRENGTH -->
+                        <div class="password-strength">
+
+                            <div class="strength-track">
+                                <span id="strengthBar"></span>
+                            </div>
+
+                            <span id="strengthText">
+                                Password strength
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required>
+
+                            <button type="button"
+                                class="password-toggle"
+                                id="toggleConfirmPassword"
+                                aria-label="Show password">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="terms-group">
+
+                        <input type="checkbox"
+                            id="terms"
+                            required>
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="#" id="termsLink">Terms & Conditions</a>
+                            and
+                            <a href="#" id="privacyLink">Privacy Policy</a>.
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div id="signupMessage"
+                        class="signup-message"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button type="submit"
+                        class="signup-button"
+                        id="signupButton">
+
+                        <span>Create Account</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                    <div class="social-divider">
+    <span>OR SIGN UP WITH</span>
+</div>
+
+<div class="social-signup">
+
+    <button type="button" class="social-btn google-btn" id="googleSignup">
+        <i class="fab fa-google"></i>
+        <span>Google</span>
+    </button>
+
+    <button type="button" class="social-btn github-btn" id="githubSignup">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+    </button>
+
+    <button type="button" class="social-btn apple-btn" id="appleSignup">
+        <i class="fab fa-apple"></i>
+        <span>Apple</span>
+    </button>
+
+</div>
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+                <p class="login-text">
+                    Already have an account?
+                    <a href="login.html">Sign In</a>
+                </p>
+
+                <div class="signup-bottom">
+                    Secure registration experience
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="signup.js"></script>
+
+</body>
+</html>
