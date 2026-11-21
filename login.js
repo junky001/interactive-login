@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             showMessage(
-                "Login interface is working! Backend authentication is next.",
+                "Login successful!",
                 "success"
             );
 
